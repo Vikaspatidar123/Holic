@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Info
 # Create your views here.
+# https://dashboard.heroku.com/apps/teaholiccafe/deploy/github
 def Index(request):
     if request.method=='GET':
         a=Info.objects.all()
