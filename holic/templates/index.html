@@ -55,33 +55,33 @@
             <form action=" " method="POST">{% csrf_token%}
               <div class="row">
                 <div class="col-md-2 col-sm-2 col-xs-2">
-                    <span class="CommonFormLabel">Today Data</span>
+                    <span class="CommonFormLabel">Today Date</span>
                       
-                        <input type="date" name="data" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
+                        <input type="date" name="data" rows="2"  required cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <span class="CommonFormLabel">Milk Amount</span>
                       
-                        <input type="number" name="milk" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
+                        <input type="number" name="milk" rows="2" required cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <span class="CommonFormLabel">Total Spend  Amount</span>
                         <!-- <textarea name="ctl00$cphLogin$TextBox1" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea> -->
-                        <input type="number" name="spend" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
+                        <input type="number" name="spend" rows="2" required cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <span class="CommonFormLabel">PTM Amount</span>
                         <!-- <textarea name="ctl00$cphLogin$TextBox1" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea> -->
-                        <input type="number" name="ptm" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
+                        <input type="number" name="ptm" rows="2" required cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
                 </div><div class="col-md-2 col-sm-2 col-xs-2">
                     <span class="CommonFormLabel">Case Amount</span>
                         <!-- <textarea name="ctl00$cphLogin$TextBox1" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea> -->
-                        <input type="number" name="Case" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
+                        <input type="number" name="Case" rows="2" required cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <span class="CommonFormLabel">Duy Amount</span>
                         <!-- <textarea name="ctl00$cphLogin$TextBox1" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea> -->
-                        <input type="number" name="Duy" rows="2" cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
+                        <input type="number" name="Duy" rows="2"  required cols="20" id="cphLogin_TextBox1" class="CommonFormTbx form-control" placeholder="Description"></textarea>
                 </div>
               </div>
               <div class="col-md-12 col-sm-12 col-xs-12 mt-3">
@@ -90,7 +90,24 @@
             </form>
             </div>
         </div>
+<div class=" col-md-12 col-sm-12 col-xs-12 mt-3 form-control"  style="background-color: black;">
+  <form action="search" method="POST">{% csrf_token%}<div class="row">
+  
+  <div class="col-md-2 col-sm-2 col-xs-2">
+  <lable>Search Month & Year</lable>
+  <input type="month" id="start" class="form-control clickdata" name="month">
+</div>
+<div class="col-md-2 col-sm-2 col-xs-2">
+  <lable>Search with Date </lable>
+  <input type="date" id="start" class="form-control " name="date">
+</div>
+<div class="col-md-2 col-sm-2 col-xs-2">
+  <button type="submit"> Submit</button>
+  <input type="submit" name='all' value="All">
+</div>
 
+      </div></form>
+</div>
         <div class="col-md-12 col-sm-12 col-xs-12 mt-3 form-control">
             <table class="table">
                 <thead>
