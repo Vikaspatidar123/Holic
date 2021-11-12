@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Info(models.Model):
-    data=models.CharField(max_length=100,default='')
+    data = models.DateField(auto_now=False)
     Milk=models.CharField(max_length=100,default='')
     PTM =models.CharField(max_length=100,default='')
     Other=models.CharField(max_length=100,default='')

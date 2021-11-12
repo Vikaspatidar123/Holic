@@ -31,7 +31,15 @@ def Serach(request):
             a=Info.objects.all()
             return render(request,'index.html',{'a':a})
         else:
-            a=Info.objects.filter(data=date)
-            print(month,date)
-            return render(request,'index.html',{'a':a})
+            if date:
+                a=Info.objects.filter(data=date)
+                print(month,date)
+                return render(request,'index.html',{'a':a})
+            else:
+                
+                year,month=month.split('-')
+                # month='-'.join(month)
+                print(month) 
+                a=Info.objects.filter(data__month=month,data__year=year)
+                return render(request,'index.html',{'a':a})
 
