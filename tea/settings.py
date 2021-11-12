@@ -27,7 +27,7 @@ import socket
 
 if socket.gethostname() == "server_name":
     DEBUG = False
-    ALLOWED_HOSTS = ["*",]
+    ALLOWED_HOSTS = ["teaholiccafe.herokuapp.com",]
     ...
 else:
     DEBUG = True
