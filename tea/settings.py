@@ -23,9 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cxmy&ze_q-7&0py+s646bzim8@2p5*xs^dy#h%qq-!3p+y)g^&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+import socket
 
-ALLOWED_HOSTS = ["*"]
+if socket.gethostname() == "server_name":
+    DEBUG = False
+    ALLOWED_HOSTS = ["*",]
+    ...
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
 
 
 # Application definition
@@ -55,7 +61,7 @@ ROOT_URLCONF = 'tea.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,3 +134,5 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL='home'
+LOGOUT_REDIRECT_URL='login'

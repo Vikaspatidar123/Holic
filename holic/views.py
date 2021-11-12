@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
 from .models import Info
+
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 # https://dashboard.heroku.com/apps/teaholiccafe/deploy/github
 # https://teaholiccafe.herokuapp.com/
+@login_required
 def Index(request):
     if request.method=='GET':
         a=Info.objects.all()

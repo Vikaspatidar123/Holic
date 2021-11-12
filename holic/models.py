@@ -11,4 +11,6 @@ class Info(models.Model):
     Duy =models.CharField(max_length=100,default='')
     Total =models.CharField(max_length=100,default='')
 
+    
+
 
