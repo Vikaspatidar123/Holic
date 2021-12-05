@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 def Index(request):
     if request.method=='GET':
         a=Info.objects.all()
+        # c=Info.objects.count()
         return render(request,'index.html',{'a':a})
     else:
         data=request.POST.get('data')
@@ -46,3 +47,5 @@ def Serach(request):
                 a=Info.objects.filter(data__month=month,data__year=year)
                 return render(request,'index.html',{'a':a})
 
+def vik(request):
+    return render(request,"1.html")
