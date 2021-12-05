@@ -23,15 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cxmy&ze_q-7&0py+s646bzim8@2p5*xs^dy#h%qq-!3p+y)g^&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-import socket
+# import socket
 
-if socket.gethostname() == "server_name":
-    DEBUG = False
-    ALLOWED_HOSTS = ["teaholiccafe.herokuapp.com",]
-    ...
-else:
-    DEBUG = True
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
+# if socket.gethostname() == "server_name":
+DEBUG = False
+ALLOWED_HOSTS = ["teaholiccafe.herokuapp.com"]
+#     ...
+# else:
+#     DEBUG = True
+#     ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
 
 
 # Application definition
